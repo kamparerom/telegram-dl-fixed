@@ -49,7 +49,7 @@ class YouTubeAdapter(BasePlatformAdapter):
             "extract_flat": False,
             "skip_download": True,
             "socket_timeout": 30,
-            "extractor_args": {"youtube": {"player_client": ["android_vr", "web_safari"]}},
+            "extractor_args": {"youtube": {"player_client": ["tv", "web"]}},
         }
 
         loop = asyncio.get_event_loop()
