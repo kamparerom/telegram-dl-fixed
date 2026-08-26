@@ -64,7 +64,7 @@ class MediaDownloader:
             "no_warnings": True,
             "progress_hooks": [yt_dlp_hook],
             "socket_timeout": 30,
-            "extractor_args": {"youtube": {"player_client": ["default", "-android_sdkless"]}},
+            "extractor_args": {"youtube": {"player_client": ["web_safari", "tv"]}},
             "js_runtimes": {"node": {"path": "/usr/local/bin/node"}},
         }
 
