@@ -49,7 +49,7 @@ class YouTubeAdapter(BasePlatformAdapter):
             "extract_flat": False,
             "skip_download": True,
             "socket_timeout": 30,
-            "extractor_args": {"youtube": {"player_client": ["default", "-android_sdkless"]}},
+            "extractor_args": {"youtube": {"player_client": ["web_safari", "tv"]}},
             "js_runtimes": {"node": {"path": "/usr/local/bin/node"}},
         }
 
