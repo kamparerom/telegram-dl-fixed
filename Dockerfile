@@ -4,11 +4,15 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
     curl \
+    ca-certificates \
     git \
     build-essential \
-    nodejs \
-    npm \
     && rm -rf /var/lib/apt/lists/*
+
+# Install Node.js 22+ (required by yt-dlp-ejs; Node 20 is too old)
+RUN curl -fsSL https://nodejs.org/dist/v22.10.0/node-v22.10.0-linux-x64.tar.xz \
+    | tar -xJ -C /usr/local --strip-components=1
+ENV PATH="/usr/local/bin:${PATH}"
 
 WORKDIR /app
 
